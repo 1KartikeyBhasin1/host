@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+
+    <title>Personal Portfolio Using HTML & CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+<header>
+    <div class="header-left-side">
+        <h1>
+            Kartikey <br />
+            Bhasin
+        </h1>
+        <h2>- B.Tech CSE Student</h2>
+        <p>
+            Hey,
+
+            I'm just someone who loves to code, listen to music, and watch movies. Drawing and designing stuff is also my jam. Coding is like solving puzzles for me. When I'm not doing that, I'm probably chilling with some good tunes or checking out the latest movies. Drawing lets me express myself, and I'm always doodling something fun.
+
+            So yeah, that's me - into tech, music, movies, and drawing. Currently Studying in UPES, if you ever wanna talk about any of that stuff, just give me a shout!
+
+            Take care.
+        </p>
+
+        <button ng-click="openLink('https://www.linkedin.com/in/kartikey-bhasin-7558b6255')">Linkedin</button>
+        <button ng-click="openLink('https://www.instagram.com/.carti_kay.?igsh=ejFoYzcwMWE1NHgx')">Instagram</button>
+        <br />
+        <br>
+        <button ng-click="openForm()">Shoot me a message</button>
+        <button ng-click="openLink('https://github.com/1KartikeyBhasin1')">Github</button>
+        <br />
+        <br>
+        <h2> Contact NOW!</h2>
+    </div>
+    <div class="header-right-side">
+        <img src="#" alt="img" />
+    </div>
+</header>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $window) {
+    $scope.openLink = function(url) {
+        $window.open(url, '_blank');
+    }
+
+    $scope.openForm = function() {
+        $window.location.href = 'form.html';
+    }
+});
+</script>
+</body>
+</html>
